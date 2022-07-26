@@ -1,3 +1,8 @@
+__author__ = "Baishali Dutta"
+__copyright__ = "Copyright (C) 2022 Baishali Dutta"
+__license__ = "Apache License 2.0"
+__version__ = "0.1"
+
 # USAGE
 # python cifar10_lr_decay.py --output output/lr_decay_f0.25_plot.png
 
@@ -8,7 +13,7 @@ matplotlib.use("Agg")
 # import the necessary packages
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import classification_report
-from pyimagesearch.nn.conv import MiniVGGNet
+from lib.nn.conv import MiniVGGNet
 from tensorflow.keras.callbacks import LearningRateScheduler
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.datasets import cifar10
