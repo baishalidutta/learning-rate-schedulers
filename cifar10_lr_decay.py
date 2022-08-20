@@ -26,12 +26,12 @@ import argparse
 def step_decay(epoch):
     # initialize the base initial learning rate, drop factor, and
     # epochs to drop every
-    initAlpha = 0.01
+    init_alpha = 0.01
     factor = 0.25
-    dropEvery = 5
+    drop_every = 5
 
     # compute learning rate for the current epoch
-    alpha = initAlpha * (factor ** np.floor((1 + epoch) / dropEvery))
+    alpha = init_alpha * (factor ** np.floor((1 + epoch) / drop_every))
 
     # return the learning rate
     return float(alpha)
