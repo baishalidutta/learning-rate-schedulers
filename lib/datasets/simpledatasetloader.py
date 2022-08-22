@@ -51,4 +51,4 @@ class SimpleDatasetLoader:
                                                       len(imagePaths)))
 
         # return a tuple of the data and labels
-        return (np.array(data), np.array(labels))
+        return np.array(data), np.array(labels)
