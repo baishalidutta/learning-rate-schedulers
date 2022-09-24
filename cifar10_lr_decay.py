@@ -56,7 +56,7 @@ trainY = lb.fit_transform(trainY)
 testY = lb.transform(testY)
 
 # initialize the label names for the CIFAR-10 dataset
-labelNames = ["airplane", "automobile", "bird", "cat", "deer",
+label_names = ["airplane", "automobile", "bird", "cat", "deer",
               "dog", "frog", "horse", "ship", "truck"]
 
 # define the set of callbacks to be passed to the model during
@@ -77,7 +77,7 @@ H = model.fit(trainX, trainY, validation_data=(testX, testY),
 print("[INFO] evaluating network...")
 predictions = model.predict(testX, batch_size=64)
 print(classification_report(testY.argmax(axis=1),
-                            predictions.argmax(axis=1), target_names=labelNames))
+                            predictions.argmax(axis=1), target_names=label_names))
 
 # plot the training loss and accuracy
 plt.style.use("ggplot")
